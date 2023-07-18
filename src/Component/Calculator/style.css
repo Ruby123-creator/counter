@@ -9,6 +9,8 @@ button{
     font-weight: 900;
     border-radius: 5px;
     width: 200px;
+    box-shadow: 10px 10px 5px -4px rgb(250, 251, 251);
+
 
 }
 .counterbtn button{
@@ -19,4 +21,14 @@ button{
     width: 18rem;
     margin: 2rem;
     padding: 2rem;
+    text-align: center;
+   border-radius: 1rem;
+   box-shadow: 10px 10px 5px -4px rgba(17,128,247,1);
+}
+input{
+    padding: 10px;
+    width: 80%;
+    margin: 10px;
+    border-radius: 5px;
+
 }
