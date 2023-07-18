@@ -1,0 +1,22 @@
+button{
+    
+    padding: 10px;
+    margin: 10px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 5px;
+    width: 200px;
+
+}
+.counterbtn button{
+    width: 25%;
+}
+.container{
+    background-color: rgb(226, 223, 223);
+    width: 18rem;
+    margin: 2rem;
+    padding: 2rem;
+}
