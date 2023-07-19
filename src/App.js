@@ -1,22 +1,26 @@
 import './App.css';
-import { useState } from 'react';
-import Calculator from './Component/Calculator/Calculator';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Route ,Routes } from 'react-router-dom';
+import Auth from './Pages/Auth';
+import Home from './Pages/Home';
+import Login from './Component/Auth/Login';
 function App() {
-  const [numCalculators, setNumCalculators] = useState(0);
-  const calculators = Array.from({ length: numCalculators }, (_, index) => (
-    <Calculator key={index} setNumCalculators={setNumCalculators} numCalculators={numCalculators} />
-  ));
-  const HandleClick =()=>{
-    setNumCalculators(numCalculators + 1);
-
-  }
+  const Navigate= useNavigate();
+  useEffect(()=>{
+   if(!localStorage.getItem('user')){
+      Navigate('/auth')
+   }
+  },[Navigate])
   return (
     <div className="App">
-      <button onClick={HandleClick}>Add calculator</button>
-      <div style={{display:'flex',flexWrap:'wrap' ,justifyContent:'center'}}>
-      {calculators}
+        <h2>Welcom to Counter Calculator</h2>
 
-      </div>
+      <Routes>
+      <Route path='/' element={<Home/>}/>
+       <Route path='/login' element={<Login/>}/>
+        <Route path='/auth' element={<Auth/>}/>
+      </Routes>
     </div>
   );
 }
