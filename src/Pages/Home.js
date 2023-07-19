@@ -14,7 +14,9 @@ const Home = () => {
   return (
     <div>
     <button onClick={()=>{
-          Navigate('/auth')
+      localStorage.removeItem('user')
+          Navigate('/login')
+
     }}>Log Out</button>
     <button onClick={HandleClick}>Add calculator</button>
     <div style={{display:'flex',flexWrap:'wrap' ,justifyContent:'center'}}>
