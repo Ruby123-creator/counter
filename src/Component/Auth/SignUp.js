@@ -12,15 +12,16 @@ const SignUp = () => {
             password:password
         }
         // if(localStorage.getItem('user')){
-        // if(email!==JSON.parse(localStorage.getItem('user'))){
+        if(name&&email&&password){
+          
             localStorage.setItem('user' ,JSON.stringify(obj))
             alert("sign up successfully")
               Navigate('/login')
-        // }
-        // else{
-        //     alert("Email id is already exist")
-        // }
-    // }
+        }
+        else{
+            alert("Enter valid details")
+        }
+    
     }
     
 
